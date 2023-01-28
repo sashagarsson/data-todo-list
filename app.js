@@ -18,8 +18,8 @@
         fetch('https://jsonplaceholder.typicode.com/todos')
         .then( (response) => response.json())
         .then( (json) => arrayOfTodos = json)
-        .then( () => populateTodos())
-        .then(() => logTodos())
+        // .then( () => populateTodos())
+        // .then(() => logTodos())
     }
     
     const logTodos = () => {
@@ -42,3 +42,14 @@
     todoItem.appendChild(todoTitle);
     todoList.appendChild(todoItem);
     } }
+
+
+const populateTodos2 = () => {
+let todoSection = document.getElementById('container');
+let tdTitle =  doucment.createTextNode(arrayOfTodos[0].title);
+let tdComplete = docment.createTextNode(arrayOfTodos[0].completed);
+let tdLine = 'Title: ${tdTitle} status is ${todoComplete}'
+
+let todoP = document.createElement('P');
+
+}
